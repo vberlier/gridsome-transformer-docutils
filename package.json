@@ -1,0 +1,28 @@
+{
+  "name": "gridsome-transformer-docutils",
+  "version": "0.1.0",
+  "description": "Docutils transformer for Gridsome",
+  "author": "Valentin Berlier <berlier.v@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "gridsome",
+    "gridsome-plugin",
+    "gridsome-transformer",
+    "docutils",
+    "reStructuredText",
+    "xml",
+    "sphinx"
+  ],
+  "homepage": "https://github.com/vberlier/gridsome-transformer-docutils#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vberlier/gridsome-transformer-docutils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vberlier/gridsome-transformer-docutils/issues"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

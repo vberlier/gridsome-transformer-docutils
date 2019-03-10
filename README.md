@@ -1,2 +1,3 @@
 # gridsome-transformer-docutils
-Docutils transformer for Gridsome
+
+> Docutils transformer for Gridsome.

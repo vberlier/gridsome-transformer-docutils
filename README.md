@@ -17,6 +17,20 @@ $ npm install gridsome-transformer-docutils
 
 WIP
 
+## Contributing
+
+Contributions are welcome. This project uses [jest](https://jestjs.io/) for testing.
+
+```bash
+$ npm test
+```
+
+The code follows the [javascript standard](https://standardjs.com/) style guide.
+
+```bash
+$ npm run lint
+```
+
 ---
 
 License - [MIT](https://github.com/vberlier/gridsome-transformer-docutils/blob/master/LICENSE)

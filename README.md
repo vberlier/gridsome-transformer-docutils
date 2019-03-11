@@ -9,6 +9,8 @@ This transformer parses [docutils xml documents](http://docutils.sourceforge.net
 
 ## Installation
 
+You can install `gridsome-transformer-docutils` with your `npm` client of choice.
+
 ```bash
 $ npm install gridsome-transformer-docutils
 ```

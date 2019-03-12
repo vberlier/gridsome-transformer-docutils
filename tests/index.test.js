@@ -6,19 +6,42 @@ describe('parse method', () => {
   let transformer
 
   beforeEach(() => {
-    transformer = new DocutilsTransformer(
-      {
-        basePath: 'documents/'
-      },
-      {
-        context: __dirname,
-        localOptions: {}
-      }
-    )
+    transformer = new DocutilsTransformer()
   })
 
-  test('returns the content as-is', () => {
+  test('return the content as-is', () => {
     const { content } = transformer.parse(basicDoc)
     expect(content).toEqual(basicDoc)
   })
+
+  test('return the title of the document', () => {
+    const { title } = transformer.parse(basicDoc)
+    expect(title).toEqual('Hello, world!')
+  })
+
+  test('return the source path of the document', () => {
+    const { fields: { source } } = transformer.parse(basicDoc)
+    expect(source).toEqual('hello')
+  })
+
+  test('return the source path segments of the document', () => {
+    const { fields: { segments } } = transformer.parse(basicDoc)
+    expect(segments).toEqual(['hello'])
+  })
+})
+
+test('memoized getDocumentData method', () => {
+  const noop = jest.fn()
+
+  const transformer = new DocutilsTransformer({
+    plugins: [
+      noop
+    ]
+  })
+
+  transformer.parse(basicDoc)
+  transformer.parse(basicDoc + '\n')
+  transformer.parse(basicDoc)
+
+  expect(noop.mock.calls.length).toEqual(2)
 })

@@ -34,11 +34,11 @@
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
-    "jest": "^24.3.1",
+    "jest": "^24.4.0",
     "jest-raw-loader": "^1.0.1"
   },
   "dependencies": {
-    "docutils-parser": "^0.1.3",
+    "docutils-parser": "^0.1.10",
     "lodash": "^4.17.11"
   }
 }

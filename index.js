@@ -26,7 +26,7 @@ class DocutilsTransformer {
     return {
       document: {
         type: GraphQLJSON,
-        resolve: node => docutils.parseDocument(node.content)
+        resolve: node => docutils.parse(node.content)
       }
     }
   }

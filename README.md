@@ -1,7 +1,7 @@
 # gridsome-transformer-docutils
 
 [![Build Status](https://travis-ci.com/vberlier/gridsome-transformer-docutils.svg?branch=master)](https://travis-ci.com/vberlier/gridsome-transformer-docutils)
-![npm](https://img.shields.io/npm/v/gridsome-transformer-docutils.svg)
+[![npm](https://img.shields.io/npm/v/gridsome-transformer-docutils.svg)](https://www.npmjs.com/package/gridsome-transformer-docutils)
 
 > Docutils transformer for Gridsome.
 

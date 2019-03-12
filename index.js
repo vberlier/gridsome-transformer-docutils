@@ -2,23 +2,7 @@ const path = require('path')
 const docutils = require('docutils-parser')
 const defaultsDeep = require('lodash/defaultsDeep')
 const LRU = require('lru-cache')
-const hash = require('hash-sum')
-
-const cache = new LRU({ max: 1000 })
-
-function cached (func) {
-  return (...args) => {
-    const key = hash({ func, args })
-    let result = cache.get(key)
-
-    if (!result) {
-      result = func(...args)
-      cache.set(key, result)
-    }
-
-    return result
-  }
-}
+const memoize = require('fast-memoize')
 
 class DocutilsTransformer {
   static mimeTypes () {
@@ -33,7 +17,11 @@ class DocutilsTransformer {
     this.basePath = path.normalize(basePath)
     this.plugins = (options.plugins || []).concat(localOptions.plugins || [])
 
-    this.getDocumentData = cached(this.process.bind(this))
+    this.getDocumentData = memoize(this.process.bind(this), {
+      cache: {
+        create: () => new LRU({ max: 1000 })
+      }
+    })
   }
 
   parse (content) {

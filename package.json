@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "docutils-parser": "^0.1.10",
-    "hash-sum": "^1.0.2",
+    "fast-memoize": "^2.5.1",
     "lodash": "^4.17.11",
     "lru-cache": "^5.1.1"
   }

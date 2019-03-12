@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/vberlier/gridsome-transformer-docutils/issues"
   },
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "lint": "eslint .",
     "test": "jest",

@@ -1,4 +1,4 @@
-const DocutilsTransformer = require('../index')
+const DocutilsTransformer = require('../lib')
 
 const basicDoc = require('./documents/hello.xml')
 

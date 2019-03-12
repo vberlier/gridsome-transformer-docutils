@@ -31,8 +31,9 @@ class DocutilsTransformer {
     })
 
     this.basePath = path.normalize(basePath)
+    this.plugins = (options.plugins || []).concat(localOptions.plugins || [])
 
-    this.parseDocument = cached(docutils.parse)
+    this.getDocumentData = cached(this.process.bind(this))
   }
 
   parse (content) {
@@ -45,8 +46,18 @@ class DocutilsTransformer {
     return {
       document: {
         type: GraphQLJSON,
-        resolve: node => this.parseDocument(node.content)
+        resolve: node => this.getDocumentData(node.content).document
       }
+    }
+  }
+
+  process (content) {
+    const document = docutils.parse(content, [
+      ...this.plugins
+    ])
+
+    return {
+      document
     }
   }
 }

@@ -103,7 +103,7 @@ In addition to the fields exposed by default by the source filesystem plugin, th
     options: {
       path: 'sphinx/**/*.xml',
       typeName: 'SphinxDocument',
-      route: '/:segments+'
+      route: '/:segments_raw+'
     }
   }
   ```

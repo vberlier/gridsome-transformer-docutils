@@ -108,8 +108,6 @@ In addition to the fields exposed by default by the source filesystem plugin, th
   }
   ```
 
-  **⚠️ A [gridsome bug](https://github.com/gridsome/gridsome/issues/277) currently prevents this syntax from working correctly ⚠️**
-
 ## Contributing
 
 Contributions are welcome. This project uses [jest](https://jestjs.io/) for testing.

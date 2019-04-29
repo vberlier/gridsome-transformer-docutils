@@ -41,6 +41,6 @@
     "docutils-parser": "^0.1.10",
     "fast-memoize": "^2.5.1",
     "lru-cache": "^5.1.1",
-    "slash": "^2.0.0"
+    "slash": "^3.0.0"
   }
 }

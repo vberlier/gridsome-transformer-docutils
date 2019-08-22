@@ -1,6 +1,6 @@
 {
   "name": "gridsome-transformer-docutils",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Docutils transformer for Gridsome",
   "author": "Valentin Berlier <berlier.v@gmail.com>",
   "license": "MIT",

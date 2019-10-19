@@ -20,12 +20,16 @@ describe('parse method', () => {
   })
 
   test('return the source path of the document', () => {
-    const { fields: { source } } = transformer.parse(basicDoc)
+    const {
+      fields: { source }
+    } = transformer.parse(basicDoc)
     expect(source).toEqual('hello')
   })
 
   test('return the source path segments of the document', () => {
-    const { fields: { segments } } = transformer.parse(basicDoc)
+    const {
+      fields: { segments }
+    } = transformer.parse(basicDoc)
     expect(segments).toEqual(['hello'])
   })
 })
@@ -34,9 +38,7 @@ test('memoized getDocumentData method', () => {
   const noop = jest.fn()
 
   const transformer = new DocutilsTransformer({
-    plugins: [
-      noop
-    ]
+    plugins: [noop]
   })
 
   transformer.parse(basicDoc)

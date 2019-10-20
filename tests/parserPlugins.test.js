@@ -6,6 +6,7 @@ const {
 } = require('../lib/parserPlugins')
 
 const basicDoc = require('./documents/hello.xml')
+const indexDoc = require('./documents/index.xml')
 const testDoc = require('./documents/test.xml')
 
 describe('document title', () => {
@@ -35,26 +36,38 @@ describe('document title', () => {
 })
 describe('source path', () => {
   test('default basePath', () => {
-    let source = ''
+    let sourcePath = []
 
     docutils.parse(basicDoc, [
-      extractSourcePath('/', sourcePath => {
-        source = sourcePath
+      extractSourcePath('/', path => {
+        sourcePath = path
       })
     ])
 
-    expect(source).toEqual('hello')
+    expect(sourcePath).toEqual(['hello'])
   })
 
   test('custom basePath', () => {
-    let source = ''
+    let sourcePath = []
 
     docutils.parse(basicDoc, [
-      extractSourcePath('example-project/', sourcePath => {
-        source = sourcePath
+      extractSourcePath('example-project/', path => {
+        sourcePath = path
       })
     ])
 
-    expect(source).toEqual('docs/hello')
+    expect(sourcePath).toEqual(['docs', 'hello'])
+  })
+
+  test('index page', () => {
+    let sourcePath = []
+
+    docutils.parse(indexDoc, [
+      extractSourcePath('example-project/', path => {
+        sourcePath = path
+      })
+    ])
+
+    expect(sourcePath).toEqual(['docs'])
   })
 })

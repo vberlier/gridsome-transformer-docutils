@@ -20,17 +20,9 @@ describe('parse method', () => {
   })
 
   test('return the source path of the document', () => {
-    const {
-      fields: { source }
-    } = transformer.parse(basicDoc)
-    expect(source).toEqual('hello')
-  })
+    const { sourcePath } = transformer.parse(basicDoc)
 
-  test('return the source path segments of the document', () => {
-    const {
-      fields: { segments }
-    } = transformer.parse(basicDoc)
-    expect(segments).toEqual(['hello'])
+    expect(sourcePath).toEqual(['hello'])
   })
 })
 

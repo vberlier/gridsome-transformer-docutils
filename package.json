@@ -38,7 +38,7 @@
     "jest-raw-loader": "^1.0.1"
   },
   "dependencies": {
-    "docutils-parser": "^0.2.0",
+    "docutils-parser": "^0.3.0",
     "fast-memoize": "^2.5.1",
     "lru-cache": "^5.1.1",
     "slash": "^3.0.0"

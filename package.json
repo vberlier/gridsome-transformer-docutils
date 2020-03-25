@@ -40,8 +40,7 @@
   "dependencies": {
     "docutils-parser": "^1.0.0",
     "fast-memoize": "^2.5.2",
-    "lru-cache": "^5.1.1",
-    "slash": "^3.0.0"
+    "lru-cache": "^5.1.1"
   },
   "files": [
     "lib/*.js"

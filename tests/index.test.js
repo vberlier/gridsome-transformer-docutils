@@ -18,12 +18,6 @@ describe('parse method', () => {
     const { title } = transformer.parse(basicDoc)
     expect(title).toEqual('Hello, world!')
   })
-
-  test('return the source path of the document', () => {
-    const { sourcePath } = transformer.parse(basicDoc)
-
-    expect(sourcePath).toEqual(['hello'])
-  })
 })
 
 test('memoized getDocumentData method', () => {

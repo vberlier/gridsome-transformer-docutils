@@ -1,4 +1,4 @@
-const docutils = require('docutils-parser')
+const docutils = require('docutils')
 
 const {
   extractDocumentTitle
